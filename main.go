@@ -3,15 +3,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/atulhere/goPractices/constant"
-	"github.com/atulhere/goPractices/hello"
-	strucure "github.com/atulhere/goPractices/structure"
+	"goPractices/constant"
+	"goPractices/hello"
+	"goPractices/structure"
 )
 
 func main() {
 
 	//Hello Word from Package
-	hello.HellWord()
+	hello.HellWorld()
 
 	//constant Practice
 	constant.PlayWithConstant()
@@ -23,7 +23,7 @@ func main() {
 	//controlflow.ExampleContinue()
 
 	//Example extract
-	strucure.ExampleStruct()
+	structure.ExampleStruct()
 
 	//Message from main local
 	fmt.Println("Welcome in learning world")
