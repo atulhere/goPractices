@@ -1,11 +1,15 @@
 package main
 
 import (
-	"fmt"
-
+	//"goPractices/api"
 	"goPractices/constant"
 	"goPractices/hello"
 	"goPractices/structure"
+
+	//"goPractices/variable"
+	"goPractices/programs"
+	"goPractices/programs/array"
+	"goPractices/programs/string"
 )
 
 func main() {
@@ -26,6 +30,27 @@ func main() {
 	structure.ExampleStruct()
 
 	//Message from main local
-	fmt.Println("Welcome in learning world")
+	//fmt.Println("Welcome in learning world")
+
+	//Example Pass by value
+	//variable.PassByValue()
+
+	//How to make api sample example
+	//api.TestApis()
+
+	//Print Number Patternn in Asc order
+
+	programs.NumbersInAscOrder()
+
+	//Program to practices arrays
+
+	array.PrintArray()
+
+	//Program to practice string
+	string.PrintStringElement()
+
+	// Program to swap two nummbers
+
+	programs.SwapTwoNumbers(10, 20)
 
 }
