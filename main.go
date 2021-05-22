@@ -9,6 +9,7 @@ import (
 	//"goPractices/variable"
 	"goPractices/programs"
 	"goPractices/programs/array"
+	"goPractices/programs/slices"
 	"goPractices/programs/string"
 )
 
@@ -50,7 +51,16 @@ func main() {
 	string.PrintStringElement()
 
 	// Program to swap two nummbers
-
 	programs.SwapTwoNumbers(10, 20)
+
+	//Program to remove duplicate elements from an array
+	array.RemoveDuplicateElement()
+
+	//Practice Slices
+	slices.PrintSlices()
+
+	slices.AppendToSlices()
+
+	slices.UseOfMake()
 
 }
