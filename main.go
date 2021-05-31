@@ -4,9 +4,11 @@ import (
 	//"goPractices/api"
 	"goPractices/constant"
 	"goPractices/hello"
+	"goPractices/maps"
 	"goPractices/structure"
 
 	//"goPractices/variable"
+
 	"goPractices/programs"
 	"goPractices/programs/array"
 	"goPractices/programs/slices"
@@ -62,5 +64,15 @@ func main() {
 	slices.AppendToSlices()
 
 	slices.UseOfMake()
+
+	//Example Map
+	maps.ExampleMap()
+	maps.Practice()
+
+	//Example Embeded struct
+	structure.EmbededStructs()
+
+	// Exmaple of Anonymous Struct
+	structure.AnonymousStruct()
 
 }

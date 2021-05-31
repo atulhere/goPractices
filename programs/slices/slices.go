@@ -14,6 +14,11 @@ func PrintSlices() {
 
 	fmt.Println("The value of first Slice is from slice", sliceFirst)
 
+	//online practice link
+	//https://play.golang.org/p/jdTCjga8wwk
+	//https://play.golang.org/p/Ankrj7x1bYS
+	//https://play.golang.org/p/hMv5ryvQg2W
+
 }
 
 func AppendToSlices() {
