@@ -2,14 +2,16 @@ package main
 
 import (
 	//"goPractices/api"
+	"fmt"
 	"goPractices/constant"
 	"goPractices/hello"
 	"goPractices/maps"
+	"goPractices/method"
 	"goPractices/structure"
 
 	//"goPractices/variable"
 
-	"goPractices/programs"
+	"goPractices/function"
 	"goPractices/programs/array"
 	"goPractices/programs/slices"
 	"goPractices/programs/string"
@@ -43,7 +45,7 @@ func main() {
 
 	//Print Number Patternn in Asc order
 
-	programs.NumbersInAscOrder()
+	//programs.NumbersInAscOrder()
 
 	//Program to practices arrays
 
@@ -53,7 +55,7 @@ func main() {
 	string.PrintStringElement()
 
 	// Program to swap two nummbers
-	programs.SwapTwoNumbers(10, 20)
+	//programs.SwapTwoNumbers(10, 20)
 
 	//Program to remove duplicate elements from an array
 	array.RemoveDuplicateElement()
@@ -74,5 +76,29 @@ func main() {
 
 	// Exmaple of Anonymous Struct
 	structure.AnonymousStruct()
+
+	//Example Functionn
+	function.SumOfNummbers(5, 4)
+
+	//Example Variadic params
+	function.VariadicParameters(5, 5, 3, 2, 8)
+
+	//Unfurling Slice
+	s := []int{1, 2, 3, 4, 5, 5, 5}
+	function.UnfurlingSlice(s...)
+
+	//Exmaple of anonymous function
+	function.ExampleAnonymousFunction()
+
+	//Example Method
+	method.ExmapleMethod()
+
+	//Find factorial using recursion
+	number := function.Factorial(3)
+	fmt.Println("The factorial of 3  is ", number)
+
+	//Find factorial using recursion
+	n := function.FactorialWithoutRecursion(3)
+	fmt.Println("The factorial of 3  is ", n)
 
 }
