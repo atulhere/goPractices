@@ -10,43 +10,34 @@ type person struct {
 	Age  int
 }
 
-type response struct {
-	status  bool
-	message string
-}
-
 func main() {
 
-	res := response{true, "All is Well"}
-	fmt.Println(res)
-
 	//create object of pserson type
-	p1 := person{Name: "Atul", Age: 35}
+	p1 := person{Name: "Ram", Age: 90}
 
 	var p2 person
 
 	//marshal data from Object to JSON
-
-	//first data will be converted into byte code
+	//first data will be converted into byte code (Array of byte)
 	data, err := json.Marshal(p1)
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	//json string from byte code
+	fmt.Println("Data in the byte code", data)
+	//convert json string from the byte code
 	jsonString := string(data)
 	fmt.Println(jsonString)
 
 	// now lets understand concept of unmarshaling using slightly different string values
 
-	st := `{"Name":"Ram","Age":90}`
+	//st := `{"Name":"Ram","Age":90}`
 
 	//now covert json string to byte code
 
-	byteCode := []byte(st)
+	//byteCode := []byte(st)
 
 	//now using byte code Unmarshal into Object
-	json.Unmarshal(byteCode, &p2)
+	json.Unmarshal(data, &p2)
 
 	fmt.Println(p2.Name)
 
