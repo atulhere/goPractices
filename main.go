@@ -11,8 +11,9 @@ import (
 
 	//"goPractices/variable"
 
+	"goPractices/array"
 	"goPractices/function"
-	"goPractices/programs/array"
+
 	"goPractices/programs/slices"
 	"goPractices/programs/string"
 )
@@ -48,17 +49,14 @@ func main() {
 	//programs.NumbersInAscOrder()
 
 	//Program to practices arrays
-
-	array.PrintArray()
+	var arr = [5]int{1, 2, 2, 1, 2}
+	array.RemoveDuplicateElement(arr)
 
 	//Program to practice string
 	string.PrintStringElement()
 
 	// Program to swap two nummbers
 	//programs.SwapTwoNumbers(10, 20)
-
-	//Program to remove duplicate elements from an array
-	array.RemoveDuplicateElement()
 
 	//Practice Slices
 	slices.PrintSlices()
