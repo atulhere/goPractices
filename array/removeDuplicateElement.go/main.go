@@ -1,12 +1,12 @@
-package array
+package main
 
 import "fmt"
 
-func RemoveDuplicateElement(arr [5]int) {
+func main() {
 
 	arrMap := make(map[int]int)
 	var uniqueArray []int
-	fmt.Println(arr)
+	arr := []int{1, 2, 1, 3, 2, 1}
 	for _, v := range arr {
 		if arrMap[v] != v {
 			arrMap[v] = v

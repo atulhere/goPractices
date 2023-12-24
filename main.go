@@ -11,7 +11,6 @@ import (
 
 	//"goPractices/variable"
 
-	"goPractices/array"
 	"goPractices/function"
 
 	"goPractices/programs/slices"
@@ -19,6 +18,8 @@ import (
 )
 
 func main() {
+
+	TestGreetings()
 
 	//Hello Word from Package
 	hello.HellWorld()
@@ -47,10 +48,6 @@ func main() {
 	//Print Number Patternn in Asc order
 
 	//programs.NumbersInAscOrder()
-
-	//Program to practices arrays
-	var arr = [5]int{1, 2, 2, 1, 2}
-	array.RemoveDuplicateElement(arr)
 
 	//Program to practice string
 	string.PrintStringElement()
