@@ -21,7 +21,7 @@ func main() {
 	for i := 0; i < 5; i++ {
 		if arr[i] == searchValue {
 			flag = true
-			fmt.Println("The number found at index", i)
+			fmt.Println("The number found at index ", i)
 		}
 	}
 	if !flag {
