@@ -1,4 +1,4 @@
-package structure
+/* package structure
 
 import "fmt"
 
@@ -60,3 +60,4 @@ func AnonymousStruct() {
 	fmt.Println("Exmaple of Anonymous Struct", company)
 
 }
+*/

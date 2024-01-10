@@ -32,6 +32,7 @@ func main() {
 	arr := []int{1, 0, 2, 7, 9, 11, 5, 8}
 
 	fmt.Println("Unsorted Array: ", arr)
+	//Sort Array using bubble sort
 	sortedArray := bubbleSort(arr)
 	fmt.Println("Sorted Array: ", sortedArray)
 

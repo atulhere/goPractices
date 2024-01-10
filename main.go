@@ -1,20 +1,14 @@
 package main
 
 import (
-	//"goPractices/api"
 	"fmt"
 	"goPractices/constant"
-	"goPractices/hello"
-	"goPractices/maps"
-	"goPractices/method"
-	"goPractices/structure"
-
-	//"goPractices/variable"
-
 	"goPractices/function"
-
+	"goPractices/hello"
+	"goPractices/method"
 	"goPractices/programs/slices"
 	"goPractices/programs/string"
+	"goPractices/structure"
 )
 
 func main() {
@@ -61,16 +55,6 @@ func main() {
 	slices.AppendToSlices()
 
 	slices.UseOfMake()
-
-	//Example Map
-	maps.ExampleMap()
-	maps.Practice()
-
-	//Example Embeded struct
-	structure.EmbededStructs()
-
-	// Exmaple of Anonymous Struct
-	structure.AnonymousStruct()
 
 	//Example Functionn
 	function.SumOfNummbers(5, 4)

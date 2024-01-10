@@ -1,4 +1,4 @@
-package structure
+/* package main
 
 //https://play.golang.org/p/mZZjvzlJScm
 import (
@@ -36,3 +36,4 @@ func PracticeStruct() {
 	}
 
 }
+*/

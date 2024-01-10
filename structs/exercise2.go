@@ -1,4 +1,4 @@
-package structure
+/* package structure
 
 //https://play.golang.org/p/6ihcMzaXp-7
 
@@ -30,3 +30,4 @@ func MapThroughStruct() {
 
 	}
 }
+*/
