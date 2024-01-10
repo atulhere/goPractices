@@ -31,7 +31,7 @@ func SumOfSubArraysBruteForce(arr []int, length int) []int {
 
 func MaxSumOfAllSubarraysBruteForce(arr []int, length int) int {
 
-	// lentgh of the array
+	// total number of elements in array
 	n := len(arr)
 
 	maxSum := 0
@@ -51,6 +51,30 @@ func MaxSumOfAllSubarraysBruteForce(arr []int, length int) int {
 
 }
 
+func MaxSumUsingSliwdingWindow(arr []int, lenght int) int {
+	// total number of elements in array
+	n := len(arr)
+
+	// find sum of first k elements of array
+	previousSum := arr[0] + arr[1] + arr[2]
+
+	maxSum := previousSum
+	nextSum := 0
+
+	for i := 1; i < (n - lenght + 1); i++ {
+
+		nextSum = (previousSum - arr[i-1]) + arr[(i+lenght)-1]
+
+		if nextSum > maxSum {
+			maxSum = nextSum
+		}
+
+		previousSum = nextSum
+
+	}
+	return maxSum
+}
+
 func main() {
 
 	// let's define an array
@@ -64,8 +88,12 @@ func main() {
 	sumOfSubArrays := SumOfSubArraysBruteForce(arr, length)
 	fmt.Println("Array of sum of all sub arrays", sumOfSubArrays)
 
-	MaxSumOfAllSubarrays := MaxSumOfAllSubarraysBruteForce(arr, length)
+	maxSumOfAllSubarrays := MaxSumOfAllSubarraysBruteForce(arr, length)
+	fmt.Println("The maximum sum of all possible subarray is: ", maxSumOfAllSubarrays)
 
-	fmt.Println("The maximum sum of all possible subarray is: ", MaxSumOfAllSubarrays)
+	// Maximum sum of all subarrays of lenth k , using sliding window
+
+	maxSum := MaxSumUsingSliwdingWindow(arr, length)
+	fmt.Println("Maximum Sum of all subarrays of lenth k is ", maxSum)
 
 }
