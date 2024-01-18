@@ -8,7 +8,6 @@ import (
 	"goPractices/method"
 	"goPractices/programs/slices"
 	"goPractices/programs/string"
-	"goPractices/structure"
 )
 
 func main() {
