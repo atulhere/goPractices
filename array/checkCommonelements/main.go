@@ -1,47 +1,44 @@
+// Intersection of the two arrays
 package main
 
 import "fmt"
 
-func main() {
+func intersect(nums1 []int, nums2 []int) []int {
+	// Create frequency maps for each array
+	freqMap1 := make(map[int]int)
+	freqMap2 := make(map[int]int)
 
-	//Initilize arr1 and arr2
-	arr1 := []int{1, 2, 0, 3, 4, 5}
-	arr2 := []int{0, 2, 3, 9, 7}
-
-	//Create a tempArray array as a Hash
-	tempArray := make(map[int]int)
-
-	//Create an array to store common elements from both arrays
-	commonArray := []int{}
-
-	//Loop through arr1 and push the elements to Hash
-	for _, v := range arr1 {
-
-		tempArray[v] = v
-
+	for _, num := range nums1 {
+		freqMap1[num]++
 	}
 
-	/*
-		Loop through arr2 and check if
-		Has(tempArray) already have some elments of arr2
-	*/
-	commonElements := false
-	for _, v := range arr2 {
+	for _, num := range nums2 {
+		freqMap2[num]++
+	}
 
-		if tempArray[v] == v {
-			commonElements = true
-
-			//push common elments into a commonArray
-			commonArray = append(commonArray, v)
+	// Find the intersection
+	var result []int
+	for num, count1 := range freqMap1 {
+		if count2, ok := freqMap2[num]; ok {
+			// Common element found, add to result the minimum frequency
+			minFreq := min(count1, count2)
+			for i := 0; i < minFreq; i++ {
+				result = append(result, num)
+			}
 		}
 	}
 
-	if commonElements {
-		fmt.Println("The given arrays have common elments.")
-		fmt.Println("The commany array is ", commonArray)
+	return result
+}
 
-	} else {
+func main() {
 
-		fmt.Println("The given arrays does not have any common elments.")
-	}
+	nums1 := []int{1, 2, 3, 0, 9, 2}
+
+	nums2 := []int{2, 3, 4, 5, 8, 9, 2, 9, 8}
+
+	array := intersect(nums1, nums2)
+
+	fmt.Println("The intersection of the array is ", array)
+
 }
