@@ -13,8 +13,6 @@ func intersect(nums1 []int, nums2 []int) []int {
 	tempArray1 := make(map[int]int)
 	tempArray2 := make(map[int]int)
 
-	uniqueArray := make(map[int]bool)
-
 	var intersectArray []int
 
 	//iterate nums1 array and store data in tempArray1
@@ -27,21 +25,17 @@ func intersect(nums1 []int, nums2 []int) []int {
 		tempArray2[v]++
 	}
 
-	for _, v := range nums1 {
+	for count1, v := range tempArray1 {
 
 		// check if value of nums1 array is set in tempArray2
-		if _, ok := tempArray2[v]; ok && !uniqueArray[v] {
+		if count2, ok := tempArray2[v]; ok {
 
-			m1 := tempArray1[v]
-			m2 := tempArray2[v]
-			num := min(m1, m2)
+			num := min(count1, count2)
 
 			for i := 0; i < num; i++ {
 
 				intersectArray = append(intersectArray, v)
 			}
-			uniqueArray[v] = true
-
 		}
 
 	}
