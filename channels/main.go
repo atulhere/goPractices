@@ -9,6 +9,7 @@ func main() {
 }
 func hello() {
 
+	//https://go.dev/play/p/iuK_MkYXp24
 	ch := make(chan string)
 
 	go func() {
