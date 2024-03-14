@@ -35,7 +35,7 @@ func (n *Node) Insert(k int) {
 func main() {
 
 	n := Node{Key: 10}
-
+	// Insert some nodes in the tree
 	n.Insert(30)
 	n.Insert(5)
 	fmt.Println(n)
