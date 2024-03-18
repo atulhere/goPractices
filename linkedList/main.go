@@ -24,14 +24,12 @@ func (ll *LinkedList) Insert(data int) {
 		ll.Head = newNode
 		return
 	}
-
 	lastNode := ll.Head
 
 	for lastNode.Next != nil {
-
 		lastNode = lastNode.Next
-
 	}
+
 	lastNode.Next = newNode
 }
 
@@ -51,16 +49,20 @@ func main() {
 	//Create a linked list
 	linkedList := LinkedList{}
 
+	//var node *Node
+
+	//fmt.Println("The value of node variable ", node)
+
 	// Insert a Element( a node) in Link List
 
 	linkedList.Insert(20)
-	linkedList.Insert(30)
-	linkedList.Insert(40)
-	linkedList.Insert(50)
-	linkedList.Insert(60)
+	//linkedList.Insert(30)
+	//linkedList.Insert(40)
+	//linkedList.Insert(50)
+	//linkedList.Insert(60)
 
 	// Display the elements from the Link List
 
-	linkedList.Display()
+	//linkedList.Display()
 
 }

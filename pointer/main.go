@@ -4,7 +4,9 @@ import "fmt"
 
 func main() {
 	a := 10
-	fmt.Println("Value of a is ", a)
+	var p *int = &a
+	//p = &a
+	fmt.Println("Value of p is ", p)
 	//using address of a
 	copy(&a)
 	fmt.Println("Value of a outside the function call is ", a)
