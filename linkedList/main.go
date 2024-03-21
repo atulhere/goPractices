@@ -66,3 +66,6 @@ func main() {
 	//linkedList.Display()
 
 }
+
+//https://go.dev/play/p/seF4KK44S-4
+//https://go.dev/play/p/rsQmftCYP_I
