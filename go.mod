@@ -8,5 +8,5 @@ require (
 	github.com/rabbitmq/amqp091-go v0.0.0-20210623134908-fa1229110efb
 	github.com/rogpeppe/godef v1.1.2 // indirect
 	github.com/uudashr/gopkgs/v2 v2.1.2 // indirect
-	golang.org/x/tools v0.19.0 // indirect
+	golang.org/x/tools v0.20.0 // indirect
 )
