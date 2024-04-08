@@ -1,4 +1,4 @@
-module goPractices
+module github.com/atulhere/goPractices
 
 go 1.16
 

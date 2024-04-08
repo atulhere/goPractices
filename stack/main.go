@@ -18,7 +18,7 @@ func (s *Stack) push(number int){
 
 }
 
-// pop an element from the slice
+// Pop an element from the slice
 func (s *Stack) pop(){
 
 	l := len(s.item) -1 
@@ -26,6 +26,26 @@ func (s *Stack) pop(){
 
 }
 
+// Check If Stack is empty
+
+func (s *Stack) isEmpty() string{
+	if(len(s.item)>0){
+		return "Stack is non empty"
+	}
+	return "Stack is empty"
+}
+
+// Print the top element from the stack
+func (s * Stack) top(){
+
+	if(len(s.item)>0){
+		 element := s.item[len(s.item)-1]
+		 fmt.Println("Stack Top element is : ", element)
+	}else{
+
+		fmt.Println("Stack is empty")
+	}	
+}
 
 func main(){
 
@@ -44,10 +64,17 @@ func main(){
 
 	// Pop the last element from the stack
 	s.pop()
-
+	
+	
 	// Print the elements
 	fmt.Println(s.item)
 
+	// Check if Stack is empty
+	response := s.isEmpty()
+	fmt.Println(response)
+
+	// Print the top element from the stack
+	s.top()
 }
 
 
